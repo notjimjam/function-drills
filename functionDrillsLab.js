@@ -299,15 +299,17 @@ let loser = 'Glimmer'
 
 //CODE HERE
 function theEliminator(arr1, arr2){
-  for(let i = 0; i < arr1.length; i++){
-    for(let j = 0; j <arr2.length; j++) {
-      if(i === j) {
-        return arr1.splice(i)
-      }
-    } 
-  } 
+  for(let i = 0; i < arr1.length; i++) {
+    if(arr1[i] === arr2) {
+      arr1.splice(i, 1)
+    }
+  }
+  return arr1
 }
-// console.log(theEliminator(contestants, loser))
+let whosLeft = theEliminator(contestants, loser)
+// console.log(whosLeft)
+// try this with a nested for loop if the second is an array
+
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo."
 /*
@@ -339,7 +341,7 @@ function emailCheck(email) {
     return "must provide a valid email address"
   }
 }
-// console.log(emailCheck("     jamie@me.com    "))
+console.log(emailCheck("     jamie@me.com    "))
 
 
 
@@ -355,23 +357,41 @@ function emailCheck(email) {
 */
 
 //CODE HERE
+// function buyFrogs(gold) {
+//   return gold / 3
+// }
+// let totalFrogs = buyFrogs(67)
 
-
+// console.log(totalFrogs)
 ////////////////// PROBLEM 20 ////////////////////
 /*
-  You might have noticed a slight bug in the previous problem. If you were to pass in 4 gold, the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. Re-write the function you used in the previous problem (give it the same name, just add a 2 to the end of it) that fixes this bug. Invoke the function and store the returned value to a variable called `totalFrogs2`.
+  You might have noticed a slight bug in the previous problem. If you were to pass in 4 gold, 
+  the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. 
+  You would just be able to purchase 1 product. Re-write the function you used in the previous problem 
+  (give it the same name, just add a 2 to the end of it) that fixes this bug. 
+  Invoke the function and store the returned value to a variable called `totalFrogs2`.
 */
 
 //CODE HERE
+const buyFrogs = (gold) => Math.floor(gold / 3)
 
+let totalFrogs2 = buyFrogs(67)
+// console.log(totalFrogs2)
 
 ////////////////// PROBLEM 21 ////////////////////
 let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 /*
-  Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine if the array is in ascending order. The function should return true, if it is sorted in ascending order, false if it is not. Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
+  Write a function that takes in an array of numbers as an argument. 
+  In the body of the function, write logic to determine if the array is in ascending order. 
+  The function should return true, if it is sorted in ascending order, false if it is not. 
+  Create a variable, `arrayIsAscending` and set it equal to your function invoked. 
+  Use the sample array to test this function.
 */
 
 //CODE HERE
+// const ascending = (arr) => {
+//   if ()
+// }
 
 
 ////////////////// PROBLEM 22 ////////////////////
@@ -392,7 +412,8 @@ function pond() {
 /*
   There are 4 variables above: duck, rubberDuck, sailorDuck and realDuck.
   All within different scopes.
-  Given the functions and variables above, edit the arrays below to contain only the appropriate variable names (as strings).
+  Given the functions and variables above, edit the arrays below to contain only the appropriate 
+  variable names (as strings).
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
