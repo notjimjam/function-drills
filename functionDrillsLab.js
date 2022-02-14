@@ -93,11 +93,12 @@ const compareNums = (num1, num2) => {
 
 //CODE HERE
 function add(num1, num2){
-  let ParseInt1 = parseInt(num1)
-  let ParseInt2 = parseInt(num2)
-  return (ParseInt1 + ParseInt2)
+  let parseInt1 = parseInt(num1)
+  let parseInt2 = parseInt(num2)
+  return (parseInt1 + parseInt2)
 }
-// console.log (add(45, "56ft"))
+let sum = add
+// console.log(sum(12, 56))
 ////////////////// PROBLEM 7 ////////////////////
 
 /*
@@ -126,7 +127,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-// arrow
+'arrow'
 // declaration
 // expression
 
@@ -136,7 +137,9 @@ const exclaimTwo = str => {
 
   Brownie points if you use a template string
 */
+const exclaimThree = str => `${str.toUpperCase()}!!!!`
 
+// console.log(exclaimThree("hey y'all"))
 
 
 ////////////////// PROBLEM 9 ////////////////////
@@ -151,20 +154,34 @@ function exclaimFour(str) {
 }
 
 // arrow
-// declaration
+'declaration'
 // expression
 
 
 ////////////////// PROBLEM 10 ////////////////////
 /*
   Write a function called nameCheck that takes in a name parameter.
-  nameCheck should check if the name equals 'Steven'. If it does, return 'What is up Steven?'
+  nameCheck should check if the name equals 'Steven'. If it does, return 
+  'What is up Steven?'
   If the name parameter is equal to Bryan, return 'Hey Bryan!'
-  If the name parameter is anything else, return 'Cool name, NAMEPARAM' (with NAMEPARAM being the value of the name parameter being passed in).
-  Create a variable called 'nameGreeting' and set it equal to your function invoked (called) passing in an argument.
+  If the name parameter is anything else, return 'Cool name, NAMEPARAM' 
+  (with NAMEPARAM being the value of the name parameter being passed in).
+  Create a variable called 'nameGreeting' and set it equal to your function 
+  invoked (called) passing in an argument.
 */
 
 //CODE HERE
+function nameCheck(name) {
+  if(name === "Steven"){
+    return("What's good Steven?")
+  } else if (name === "Bryan") {
+    return("Hey there Bryan")
+  } else {
+    return(`That's a sick name, ${name}`)
+  }
+}
+let nameGreeting = nameCheck
+console.log(nameGreeting("Kevin"))
 
 
 ////////////////// PROBLEM 11 ////////////////////
