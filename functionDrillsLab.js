@@ -12,8 +12,10 @@
 */
 
 //CODE HERE
-
-
+function helloWorld(){
+  console.log("Hello, World!")
+}
+// helloWorld()
 ////////////////// PROBLEM 2 ////////////////////
 
 /*
@@ -21,7 +23,10 @@
 */
 
 //CODE HERE
-
+const jsNinja = () => {
+  return 'I am a JavaScript ninja!'
+}
+// console.log(jsNinja())
 
 ////////////////// PROBLEM 3 ////////////////////
 /*
@@ -31,7 +36,12 @@
 */
 
 //CODE HERE
+function printName (name){
+  console.log(name)
+}
 
+// printName("Jamie")
+// printName("Cameron")
 
 ////////////////// PROBLEM 4 ////////////////////
 /*
@@ -45,8 +55,10 @@
 */
 
 //CODE HERE
-
-
+function greeting(name){
+  console.log(`Hello ${name}!`)
+}
+// greeting("Jamie")
 ////////////////// PROBLEM 5 ////////////////////
 
 /*
@@ -59,19 +71,33 @@
 */
 
 //CODE HERE
-
+const compareNums = (num1, num2) => {
+  if(num1 > num2) {
+    return num1
+  } else if(num2 > num1) {
+    return num2
+  } else if(num1 === num2) {
+    return num1
+  }
+}
+// console.log(compareNums(45, 67))
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
   Create a function called add that takes in two parameters 
   Inside, convert the arguments to be numbers (just in case strings get sent in)
   The add function should RETURN the two parameters added together.
-  Create a variable outside the function called 'sum' and set it equal to add invoked (called), passing in 2 arguments.
+  Create a variable outside the function called 'sum' and set it equal to add invoked (called), 
+  passing in 2 arguments.
 */
 
 //CODE HERE
-
-
+function add(num1, num2){
+  let ParseInt1 = parseInt(num1)
+  let ParseInt2 = parseInt(num2)
+  return (ParseInt1 + ParseInt2)
+}
+// console.log (add(45, "56ft"))
 ////////////////// PROBLEM 7 ////////////////////
 
 /*
@@ -85,7 +111,7 @@ const exclaim = function(str) {
 
 // arrow
 // declaration
-// expression
+'expression'
 
 
 
