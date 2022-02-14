@@ -237,7 +237,15 @@ function printAllNames(names) {
 */
 
 //CODE HERE
-
+function thatsOdd(num){
+  if(num % 2 === 0){
+    return "That's not odd"
+  } else {
+    return "That is odd indeed"
+  }
+}
+let oddChecker = thatsOdd
+// console.log(oddChecker(1))
 
 ////////////////// PROBLEM 14 ////////////////////
 
