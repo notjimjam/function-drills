@@ -284,28 +284,42 @@ function bigOrSmall(arr){
     }
   } return arrayEvaluator = answers
 }
-console.log(bigOrSmall(bigOrSmallArray))
+// let arrayEvaluator = (bigOrSmall(bigOrSmallArray))
+// console.log(bigOrSmall(bigOrSmallArray))
 
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
 let loser = 'Glimmer'
 /*
-  Write a function that is called theEliminator, which takes in two arguments, contestants (which will each be an array of strings), and loser (which will be a string).
-  The function should loop over the array of contestant names. If the loser string appears in the array, splice it out. Return the new contestants array.
+  Write a function that is called theEliminator, which takes in two arguments, 
+  contestants (which will each be an array of strings), and loser (which will be a string).
+  The function should loop over the array of contestant names. 
+  If the loser string appears in the array, splice it out. Return the new contestants array.
 */
 
 //CODE HERE
-
-
+function theEliminator(arr1, arr2){
+  for(let i = 0; i < arr1.length; i++){
+    for(let j = 0; j <arr2.length; j++) {
+      if(i === j) {
+        return arr1.splice(i)
+      }
+    } 
+  } 
+}
+// console.log(theEliminator(contestants, loser))
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo."
 /*
-  Write a function that takes in one argument, a string. The function should then console.log that string, in entirely uppercase characters.
+  Write a function that takes in one argument, a string. 
+  The function should then console.log that string, in entirely uppercase characters.
   Invoke the function, passing in the sampleString (above).
 */
 
 //CODE HERE
+const loud = (str) => str.toUpperCase()
 
+// console.log(loud(sampleString))
 
 ////////////////// PROBLEM 18 ////////////////////
 /*
@@ -317,11 +331,27 @@ let sampleString = "Hi, my name is Kylo."
   If it does, return 'email verified' and if doesn't, 
   return 'must provide a valid email address'
 */
+function emailCheck(email) {
+  emailParam = email.trim()
+  if(emailParam.includes("@")){
+    return "email verified"
+  } else {
+    return "must provide a valid email address"
+  }
+}
+// console.log(emailCheck("     jamie@me.com    "))
+
+
 
 ////////////////// PROBLEM 19 ////////////////////
 /*
-  Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
-  Create a variable called `totalFrogs` and set it equal to your function invoked, passing in the amount of gold you are willing to spend.
+  Write a function, naming it whatever you believe to be appropriate, 
+  that buys as many chocolate frogs as possible with a certain amount of gold. 
+  Each chocolate frog costs 3 gold. Your function should take in a single parameter, 
+  which is the amount of gold you are willing to spend. Your function should return a total amount of 
+  chocolate frogs you were able to purchase.
+  Create a variable called `totalFrogs` and set it equal to your function invoked, 
+  passing in the amount of gold you are willing to spend.
 */
 
 //CODE HERE
