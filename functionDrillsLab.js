@@ -298,13 +298,12 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
-function theEliminator(arr1, arr2){
+function theEliminator(arr1, str2){
   for(let i = 0; i < arr1.length; i++) {
-    if(arr1[i] === arr2) {
+    if(arr1[i] === str2) {
       arr1.splice(i, 1)
     }
-  }
-  return arr1
+  }return arr1
 }
 let whosLeft = theEliminator(contestants, loser)
 // console.log(whosLeft)
@@ -389,10 +388,20 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
-// const ascending = (arr) => {
-//   if ()
-// }
+function checkAscending(arr) {
+  let compareValue = arr[0]
+  for(let i = 0; i < arr.length - 1; i++) {
+    if(arr[i] <= compareValue) {
+      return false
+    } else {
+      compareValue = arr[i]
+    }
+  }
+  return true
+}
 
+let arrAscending = checkAscending(sampleArray)
+console.log(arrAscending)
 
 ////////////////// PROBLEM 22 ////////////////////
 
